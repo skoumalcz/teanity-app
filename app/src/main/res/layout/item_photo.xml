@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.skoumal.teanity.app.model.recyclable.PhotoItem" />
+
+        <variable
+            name="viewModel"
+            type="com.skoumal.teanity.app.ui.pictures.PicturesViewModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/W.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_marginBottom="@dimen/l1"
+        tools:layout_marginEnd="@dimen/l1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="@{() -> viewModel.photoPressed(item)}">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                url="@{item.item.url}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                gone="@{item.item.description.empty}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_up"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingStart="@dimen/l1"
+                android:paddingTop="@dimen/l2"
+                android:paddingEnd="@dimen/l1"
+                android:paddingBottom="@dimen/l1"
+                android:text="@{item.item.description}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="?attr/textColorInactive"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

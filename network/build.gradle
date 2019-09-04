@@ -1,0 +1,16 @@
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+}
+
+dependencies {
+    api("com.github.skoumalcz.teanity:network:one.zero-SNAPSHOT")
+
+    implementation(project(":model"))
+    implementation(Lib.kotlin.coroutines)
+
+    implementation(Lib.square.retrofit)
+    implementation(Lib.square.logging)
+
+    implementation(Lib.koin.core)
+}

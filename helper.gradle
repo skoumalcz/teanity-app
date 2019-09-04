@@ -1,0 +1,30 @@
+allprojects {
+    afterEvaluate {
+
+        if (!(plugins.hasPlugin("com.android.library") || plugins.hasPlugin("com.android.application"))) {
+            return
+        }
+
+        if (plugins.hasPlugin("kotlin-android-extensions")) {
+            androidExtensions {
+                experimental = true
+            }
+        }
+
+        android {
+            compileSdkVersion(Sdk.compileSdk)
+
+            defaultConfig {
+                minSdkVersion(Sdk.minSdk)
+                targetSdkVersion(Sdk.targetSdk)
+                versionCode = 1
+                versionName = "1.0"
+            }
+
+            kotlinOptions {
+                freeCompilerArgs = ["-Xallow-result-return-type", "-Xuse-experimental=kotlin.Experimental"]
+                jvmTarget = "1.8"
+            }
+        }
+    }
+}

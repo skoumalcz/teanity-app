@@ -1,0 +1,14 @@
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+}
+
+dependencies {
+    api("com.github.skoumalcz.teanity:di:one.zero-SNAPSHOT")
+
+    api(project(":model"))
+    api(project(":network"))
+    api(project(":persistence"))
+
+    implementation(Lib.kotpref)
+}

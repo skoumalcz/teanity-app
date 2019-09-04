@@ -1,0 +1,35 @@
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
+    id("kotlin-kapt")
+}
+
+kapt {
+    correctErrorTypes true
+    useBuildCache true
+    mapDiagnosticLocations true
+
+    javacOptions { option("-Xmaxerrs", 1000) }
+}
+
+android {
+
+    defaultConfig {
+        applicationId "com.skoumal.teanity.app"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+}
+
+dependencies {
+    implementation(project(":data"))
+    implementation("com.github.skoumalcz.teanity:ui:one.zero-SNAPSHOT")
+    implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.0-beta2")
+    kapt("com.github.bumptech.glide:compiler:4.9.0")
+}

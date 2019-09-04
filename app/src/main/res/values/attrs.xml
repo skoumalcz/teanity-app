@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textColor" format="color" />
+    <attr name="textColorInactive" format="color" />
+
+    <attr name="textColorInverse" format="color" />
+    <attr name="textColorInactiveInverse" format="color" />
+
+    <attr name="surfaceColor" format="color" />
+    <attr name="surfaceColorVariant" format="color" />
+</resources>

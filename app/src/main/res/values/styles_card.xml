@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="W.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">?attr/cornerRadius</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardElevation">?attr/cardElevation</item>
+    </style>
+
+</resources>
