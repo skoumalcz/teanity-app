@@ -9,6 +9,10 @@ object Navigation {
 
     fun up() = Destinations.Up
 
+    fun login() = NavigationEvent {
+        navDirections { destination = R.id.login }
+    }
+
     fun detail(it: Photo) = NavigationEvent {
         navDirections { destination = R.id.detailFragment }
         navOptions {

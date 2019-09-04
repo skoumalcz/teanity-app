@@ -10,5 +10,5 @@ dependencies {
     api(project(":network"))
     api(project(":persistence"))
 
-    implementation(Lib.kotpref)
+    api(Lib.kotpref)
 }

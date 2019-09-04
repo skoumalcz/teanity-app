@@ -23,4 +23,6 @@
         android:label="DetailFragment"
         tools:layout="@layout/fragment_detail" />
 
+    <include app:graph="@navigation/login" />
+
 </navigation>
