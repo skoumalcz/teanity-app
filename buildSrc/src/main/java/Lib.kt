@@ -53,6 +53,10 @@ object Lib {
 
     const val kotpref = "com.chibatching.kotpref:kotpref:2.9.1"
 
+    @JvmStatic
+    fun teanity(module: String, version: String = "1.+") =
+        "com.github.skoumalcz.teanity:$module:$version"
+
     private fun kotlin(module: String, version: String? = null) =
         "org.jetbrains.kotlin:kotlin-$module${version?.let { ":$version" } ?: ""}"
 
