@@ -20,7 +20,7 @@ kapt {
 }
 
 dependencies {
-    api(Lib.teanity("persistence", "one.zero-SNAPSHOT"))
+    api(Lib.teanity("persistence"))
 
     implementation(project(":model"))
     implementation(Lib.koin.core)

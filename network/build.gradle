@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    api(Lib.teanity("network", "one.zero-SNAPSHOT"))
+    api(Lib.teanity("network"))
 
     implementation(project(":model"))
     implementation(Lib.kotlin.coroutines)

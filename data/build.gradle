@@ -4,11 +4,11 @@ plugins {
 }
 
 dependencies {
-    api(Lib.teanity("di", "one.zero-SNAPSHOT"))
+    api(Lib.teanity("di"))
 
     api(project(":model"))
     api(project(":network"))
     api(project(":persistence"))
 
-    api(Lib.kotpref)
+    api(Lib.other.kotpref)
 }
