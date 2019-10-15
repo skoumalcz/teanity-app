@@ -1,12 +1,12 @@
 package com.skoumal.teanity.app.persistence.di
 
 import com.skoumal.teanity.app.persistence.Persistence
-import com.skoumal.teanity.app.persistence.usecase.PhotoInsertUseCase
-import com.skoumal.teanity.app.persistence.usecase.PhotoUseCase
+import com.skoumal.teanity.app.persistence.usecase.GetPhotoUseCase
+import com.skoumal.teanity.app.persistence.usecase.PutPhotoUseCase
 import org.koin.dsl.module
 
 internal val photoModule = module {
     single { get<Persistence>().photo() }
-    single { PhotoUseCase(get()) }
-    single { PhotoInsertUseCase(get()) }
+    single { GetPhotoUseCase(get()) }
+    single { PutPhotoUseCase(get()) }
 }

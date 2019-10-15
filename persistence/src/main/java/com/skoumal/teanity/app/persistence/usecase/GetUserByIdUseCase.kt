@@ -4,7 +4,7 @@ import com.skoumal.teanity.app.model.internal.User
 import com.skoumal.teanity.app.persistence.dao.UserDao
 import com.skoumal.teanity.persistence.LiveUseCase
 
-class UserUseCase internal constructor(
+class GetUserByIdUseCase internal constructor(
     private val dao: UserDao
 ) : LiveUseCase<String, User>() {
 

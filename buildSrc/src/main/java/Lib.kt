@@ -62,7 +62,7 @@ object Lib {
     @JvmStatic
     @JvmOverloads
     fun teanity(module: String, version: String = "1.+") =
-        "com.github.skoumalcz.teanity:$module:$version"
+        "com.skoumal.teanity:$module:$version"
 
     private fun kotlin(module: String, version: String? = null) =
         "org.jetbrains.kotlin:kotlin-$module${version?.let { ":$version" } ?: ""}"

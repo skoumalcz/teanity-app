@@ -5,7 +5,7 @@ import com.skoumal.teanity.app.persistence.dao.UserDao
 import com.skoumal.teanity.persistence.UseCase
 import kotlinx.coroutines.Dispatchers
 
-class UserInsertUseCase internal constructor(
+class PutUserUseCase internal constructor(
     private val dao: UserDao
 ) : UseCase<List<User>, Unit>() {
 

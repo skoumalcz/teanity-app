@@ -28,7 +28,7 @@ android {
 
 dependencies {
     implementation(project(":data"))
-    implementation(Lib.teanity("ui", "one.zero-SNAPSHOT"))
+    implementation(Lib.teanity("ui"))
 
     kapt("com.github.bumptech.glide:compiler:4.9.0")
 }

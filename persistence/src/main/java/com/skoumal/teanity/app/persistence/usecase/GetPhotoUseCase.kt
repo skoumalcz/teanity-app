@@ -4,7 +4,7 @@ import com.skoumal.teanity.app.model.internal.Photo
 import com.skoumal.teanity.app.persistence.dao.PhotoDao
 import com.skoumal.teanity.persistence.LiveUseCase
 
-class PhotoUseCase internal constructor(
+class GetPhotoUseCase internal constructor(
     private val dao: PhotoDao
 ) : LiveUseCase<Unit, List<Photo>>() {
 

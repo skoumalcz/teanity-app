@@ -5,6 +5,8 @@
 
     <data>
 
+        <import type="com.skoumal.teanity.ui.ScaleType" />
+
         <variable
             name="item"
             type="com.skoumal.teanity.app.model.recyclable.PhotoItem" />
@@ -30,9 +32,10 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 url="@{item.item.url}"
+                transformation="@{ScaleType.CENTER_CROP}"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
+                android:layout_height="200dp"
+                tools:scaleType="centerCrop"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/backgrounds/scenic" />
 

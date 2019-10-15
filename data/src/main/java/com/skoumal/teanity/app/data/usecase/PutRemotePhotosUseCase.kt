@@ -2,16 +2,16 @@ package com.skoumal.teanity.app.data.usecase
 
 import com.skoumal.teanity.app.model.inbound.divide
 import com.skoumal.teanity.app.network.Unsplash
-import com.skoumal.teanity.app.persistence.usecase.PhotoInsertUseCase
-import com.skoumal.teanity.app.persistence.usecase.UserInsertUseCase
+import com.skoumal.teanity.app.persistence.usecase.PutPhotoUseCase
+import com.skoumal.teanity.app.persistence.usecase.PutUserUseCase
 import com.skoumal.teanity.persistence.UseCase
 import kotlinx.coroutines.Dispatchers
 
-class PhotoLoadUseCase internal constructor(
+class PutRemotePhotosUseCase internal constructor(
     private val api: Unsplash,
-    private val photo: PhotoInsertUseCase,
-    private val user: UserInsertUseCase
-) : UseCase<PhotoLoadUseCase.Params, Unit>() {
+    private val photo: PutPhotoUseCase,
+    private val user: PutUserUseCase
+) : UseCase<PutRemotePhotosUseCase.Params, Unit>() {
 
     override val dispatcher = Dispatchers.IO
 

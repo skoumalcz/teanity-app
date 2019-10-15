@@ -5,7 +5,7 @@ import com.skoumal.teanity.app.persistence.dao.PhotoDao
 import com.skoumal.teanity.persistence.UseCase
 import kotlinx.coroutines.Dispatchers
 
-class PhotoInsertUseCase internal constructor(
+class PutPhotoUseCase internal constructor(
     private val dao: PhotoDao
 ) : UseCase<List<Photo>, Unit>() {
 
