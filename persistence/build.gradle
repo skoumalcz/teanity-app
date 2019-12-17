@@ -1,27 +1,20 @@
 plugins {
     id("com.android.library")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
-    id("kotlin-kapt")
+    id("teanity")
 }
 
 android {
     defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
 }
 
-kapt {
-    correctErrorTypes true
-    useBuildCache true
-    mapDiagnosticLocations true
-
-    arguments { arg("room.schemaLocation", "$projectDir/schemas") }
-
-    javacOptions { option("-Xmaxerrs", 1000) }
+teanity {
+    modules {
+        usePersistence = true
+        useComponent = true
+    }
 }
 
 dependencies {
-    api(Lib.teanity("persistence"))
-
     implementation(project(":model"))
     implementation(Lib.koin.core)
 

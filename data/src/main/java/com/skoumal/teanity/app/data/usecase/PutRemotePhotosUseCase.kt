@@ -4,7 +4,7 @@ import com.skoumal.teanity.app.model.inbound.divide
 import com.skoumal.teanity.app.network.Unsplash
 import com.skoumal.teanity.app.persistence.usecase.PutPhotoUseCase
 import com.skoumal.teanity.app.persistence.usecase.PutUserUseCase
-import com.skoumal.teanity.persistence.UseCase
+import com.skoumal.teanity.component.UseCase
 import kotlinx.coroutines.Dispatchers
 
 class PutRemotePhotosUseCase internal constructor(

@@ -1,16 +1,6 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
-    id("kotlin-kapt")
-}
-
-kapt {
-    correctErrorTypes true
-    useBuildCache true
-    mapDiagnosticLocations true
-
-    javacOptions { option("-Xmaxerrs", 1000) }
+    id("teanity")
 }
 
 android {
@@ -26,9 +16,17 @@ android {
 
 }
 
+teanity {
+    modules {
+        useUI = true
+    }
+    version {
+        versionType = com.skoumal.teanity.plugin.VersionType.SEMANTIC
+    }
+}
+
 dependencies {
     implementation(project(":data"))
-    implementation(Lib.teanity("ui"))
 
-    kapt("com.github.bumptech.glide:compiler:4.9.0")
+    kapt("com.github.bumptech.glide:compiler:4.10.0")
 }

@@ -1,12 +1,12 @@
 package com.skoumal.teanity.app.ui
 
 import android.os.Bundle
+import androidx.core.graphics.Insets
 import com.skoumal.teanity.app.R
 import com.skoumal.teanity.app.data.Config
 import com.skoumal.teanity.app.databinding.ActivityHomeBinding
 import com.skoumal.teanity.app.model.navigation.Navigation
 import com.skoumal.teanity.app.view.AppActivity
-import com.skoumal.teanity.util.Insets
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class HomeActivity : AppActivity<HomeViewModel, ActivityHomeBinding>() {

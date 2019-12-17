@@ -10,15 +10,15 @@ object Lib {
     //endregion
 
     private object V {
-        const val kotlin = "1.3.50"
-        const val coroutines = "1.2.2"
-        const val build = "3.5.0"
-        const val room = "2.2.0-beta01"
-        const val lifecycle = "2.2.0-alpha02"
-        const val navigation = "2.1.0-alpha06"
-        const val moshi = "1.8.0"
-        const val retrofit = "2.6.1"
-        const val logging = "4.1.0"
+        const val kotlin = "1.3.61"
+        const val coroutines = "1.3.2"
+        const val build = "3.6.0-beta05"
+        const val room = "2.2.2"
+        const val lifecycle = "2.2.0-rc02"
+        const val navigation = "2.2.0-rc02"
+        const val moshi = "1.9.2"
+        const val retrofit = "2.6.2"
+        const val logging = "4.2.2"
         const val koin = "2.0.1"
         const val kotpref = "2.9.1"
     }
@@ -55,14 +55,9 @@ object Lib {
     }
 
     object Other {
+        const val teanity = "com.skoumal:teanity-plugin:1.0.0"
         const val kotpref = "com.chibatching.kotpref:kotpref:${V.kotpref}"
     }
-
-
-    @JvmStatic
-    @JvmOverloads
-    fun teanity(module: String, version: String = "1.+") =
-        "com.skoumal.teanity:$module:$version"
 
     private fun kotlin(module: String, version: String? = null) =
         "org.jetbrains.kotlin:kotlin-$module${version?.let { ":$version" } ?: ""}"

@@ -2,7 +2,7 @@ package com.skoumal.teanity.app.persistence.usecase
 
 import com.skoumal.teanity.app.model.internal.Photo
 import com.skoumal.teanity.app.persistence.dao.PhotoDao
-import com.skoumal.teanity.persistence.UseCase
+import com.skoumal.teanity.component.UseCase
 import kotlinx.coroutines.Dispatchers
 
 class PutPhotoUseCase internal constructor(

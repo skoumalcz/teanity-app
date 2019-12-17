@@ -1,10 +1,10 @@
 package com.skoumal.teanity.app.ui.detail
 
+import androidx.core.graphics.Insets
 import com.skoumal.teanity.app.R
 import com.skoumal.teanity.app.databinding.FragmentDetailBinding
 import com.skoumal.teanity.app.model.navigation.photo
 import com.skoumal.teanity.app.view.AppFragment
-import com.skoumal.teanity.util.Insets
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -15,7 +15,6 @@ class DetailFragment : AppFragment<DetailViewModel, FragmentDetailBinding>() {
         parametersOf(requireArguments().photo)
     }
 
-    override fun consumeSystemWindowInsets(left: Int, top: Int, right: Int, bottom: Int) =
-        Insets(left, top, right, bottom)
+    override fun consumeSystemWindowInsets(insets: Insets) = insets
 
 }

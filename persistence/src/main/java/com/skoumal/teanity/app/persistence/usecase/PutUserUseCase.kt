@@ -2,7 +2,7 @@ package com.skoumal.teanity.app.persistence.usecase
 
 import com.skoumal.teanity.app.model.internal.User
 import com.skoumal.teanity.app.persistence.dao.UserDao
-import com.skoumal.teanity.persistence.UseCase
+import com.skoumal.teanity.component.UseCase
 import kotlinx.coroutines.Dispatchers
 
 class PutUserUseCase internal constructor(

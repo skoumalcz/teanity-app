@@ -6,6 +6,7 @@ buildscript {
         classpath(Lib.androidx.build)
         classpath(Lib.kotlin.gradle)
         classpath(Lib.navigation.build)
+        classpath(Lib.other.teanity)
     }
 
 }
