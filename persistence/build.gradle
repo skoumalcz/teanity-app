@@ -9,6 +9,7 @@ android {
 
 teanity {
     modules {
+        version = Lib.v.teanity
         usePersistence = true
         useComponent = true
     }

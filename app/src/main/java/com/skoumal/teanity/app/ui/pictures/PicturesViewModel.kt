@@ -2,7 +2,6 @@ package com.skoumal.teanity.app.ui.pictures
 
 import com.skoumal.teanity.app.BR
 import com.skoumal.teanity.app.data.usecase.PutRemotePhotosUseCase
-import com.skoumal.teanity.app.model.navigation.Navigation
 import com.skoumal.teanity.app.model.recyclable.PhotoItem
 import com.skoumal.teanity.app.persistence.usecase.GetPhotoUseCase
 import com.skoumal.teanity.app.view.AppViewModel
@@ -35,7 +34,9 @@ class PicturesViewModel(
             .let { load(it) }
     }
 
-    fun photoPressed(item: PhotoItem) = Navigation.detail(item.item).publish()
+    fun photoPressed(item: PhotoItem) = PicturesFragmentDirections
+        .actionPicturesFragmentToDetailFragment(item.item)
+        .publish()
 
     // ---
 

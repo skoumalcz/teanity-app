@@ -5,6 +5,7 @@ plugins {
 
 teanity {
     modules {
+        version = Lib.v.teanity
         useNetwork = true
     }
 }

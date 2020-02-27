@@ -1,6 +1,7 @@
 object Lib {
 
     //region Access values
+    val v = V
     val kotlin = Kotlin
     val androidx = AndroidX
     val navigation = Navigation
@@ -9,10 +10,10 @@ object Lib {
     val other = Other
     //endregion
 
-    private object V {
+    object V {
         const val kotlin = "1.3.61"
         const val coroutines = "1.3.2"
-        const val build = "3.6.0-beta05"
+        const val build = "3.6.0"
         const val room = "2.2.2"
         const val lifecycle = "2.2.0-rc02"
         const val navigation = "2.2.0-rc02"
@@ -21,6 +22,7 @@ object Lib {
         const val logging = "4.2.2"
         const val koin = "2.0.1"
         const val kotpref = "2.9.1"
+        const val teanity = "1.1-SNAPSHOT"
     }
 
     object Kotlin {

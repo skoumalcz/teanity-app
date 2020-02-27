@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main.xml"
-    app:startDestination="@id/picturesFragment">
+    android:id="@+id/main"
+    app:startDestination="@id/home">
 
-    <fragment
-        android:id="@+id/picturesFragment"
-        android:name="com.skoumal.teanity.app.ui.pictures.PicturesFragment"
-        android:label="PicturesFragment"
-        tools:layout="@layout/fragment_pictures">
-
-        <action
-            android:id="@+id/action_picturesFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.skoumal.teanity.app.ui.detail.DetailFragment"
-        android:label="DetailFragment"
-        tools:layout="@layout/fragment_detail" />
-
+    <include app:graph="@navigation/home" />
     <include app:graph="@navigation/login" />
 
 </navigation>
