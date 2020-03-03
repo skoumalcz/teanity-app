@@ -9,6 +9,7 @@ import com.skoumal.teanity.component.UseCaseState
 import com.skoumal.teanity.component.extensions.map
 import com.skoumal.teanity.component.invoke
 import com.skoumal.teanity.extensions.bindingOf
+import com.skoumal.teanity.extensions.calculateDiffAsync
 import com.skoumal.teanity.extensions.diffListOf
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
@@ -41,7 +42,7 @@ class PicturesViewModel(
     // ---
 
     private fun updateItems(new: List<PhotoItem>) = launch {
-        items.update(new, items.computeDiff(new))
+        items.update(new, items.calculateDiffAsync(new))
     }
 
 }

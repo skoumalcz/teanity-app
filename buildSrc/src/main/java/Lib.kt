@@ -22,7 +22,7 @@ object Lib {
         const val logging = "4.2.2"
         const val koin = "2.0.1"
         const val kotpref = "2.9.1"
-        const val teanity = "1.1-SNAPSHOT"
+        const val teanity = "1.1.0-alpha02"
     }
 
     object Kotlin {
