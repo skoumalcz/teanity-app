@@ -1,5 +1,6 @@
 package com.skoumal.teanity.app.ui.pictures
 
+import androidx.lifecycle.Transformations
 import com.skoumal.teanity.app.BR
 import com.skoumal.teanity.app.data.usecase.PutRemotePhotosUseCase
 import com.skoumal.teanity.app.model.recyclable.GenericAdapter
@@ -16,6 +17,15 @@ class PicturesViewModel(
 
     val adapter = GenericAdapter<PhotoItem> {
         it.setVariable(BR.viewModel, this)
+    }
+
+    val stateIndex = Transformations.map(state) {
+        when (it) {
+            is PicturesState.RecentlyLoaded,
+            PicturesState.Loading -> 0
+            is PicturesState.Loaded -> if (it.items.isEmpty()) 2 else 1
+            null -> 0
+        }
     }
 
     init {
