@@ -3,11 +3,15 @@ plugins {
     id("teanity")
 }
 
+teanity {
+    modules {
+        version = Lib.v.teanity
+
+        usePersistence = true
+        useNetwork = true
+    }
+}
+
 dependencies {
-    implementation(Lib.square.moshi)
-    implementation(Lib.androidx.room)
-
     api(Lib.kotlin.lib)
-
-    kapt(Lib.square.moshiCodegen)
 }

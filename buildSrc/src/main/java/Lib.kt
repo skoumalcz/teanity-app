@@ -6,23 +6,18 @@ object Lib {
     val androidx = AndroidX
     val navigation = Navigation
     val square = Square
-    val koin = Koin
     val other = Other
     //endregion
 
     object V {
-        const val kotlin = "1.3.61"
+        const val kotlin = "1.3.72"
         const val coroutines = "1.3.2"
-        const val build = "3.6.0"
-        const val room = "2.2.2"
-        const val lifecycle = "2.2.0-rc02"
+        const val build = "4.0.0"
         const val navigation = "2.2.0-rc02"
-        const val moshi = "1.9.2"
-        const val retrofit = "2.6.2"
         const val logging = "4.2.2"
-        const val koin = "2.0.1"
         const val kotpref = "2.9.1"
-        const val teanity = "1.1-SNAPSHOT"
+        const val teanity = "1.2-SNAPSHOT"
+        const val paging = "2.1.2"
     }
 
     object Kotlin {
@@ -33,10 +28,7 @@ object Lib {
 
     object AndroidX {
         val build = "com.android.tools.build:gradle:${V.build}"
-        val room = androidx("room", "room-ktx", V.room)
-        val roomCompiler = androidx("room", "room-compiler", V.room)
-        val lifecycleCompiler = androidx("lifecycle", "lifecycle-compiler", V.lifecycle)
-        val lifecycle = androidx("lifecycle", "lifecycle-extensions", V.lifecycle)
+        val paging = androidx("paging", "paging-runtime-ktx", V.paging)
     }
 
     object Navigation {
@@ -44,20 +36,11 @@ object Lib {
     }
 
     object Square {
-        val moshi = square("moshi", "moshi-kotlin", V.moshi)
-        val moshiCodegen = square("moshi", "moshi-kotlin-codegen", V.moshi)
-        val retrofit = square("retrofit2", "retrofit", V.retrofit)
-        val moshiConverter = square("retrofit2", "converter-moshi", V.retrofit)
         val logging = square("okhttp3", "logging-interceptor", V.logging)
     }
 
-    object Koin {
-        val core = koin("android", V.koin)
-        val viewModel = koin("android-viewmodel", V.koin)
-    }
-
     object Other {
-        const val teanity = "com.skoumal:teanity-plugin:1.0.0"
+        const val teanity = "com.skoumal:teanity-plugin:1.0.7"
         const val kotpref = "com.chibatching.kotpref:kotpref:${V.kotpref}"
     }
 
@@ -72,8 +55,5 @@ object Lib {
 
     private fun square(group: String, module: String, version: String) =
         "com.squareup.$group:$module:$version"
-
-    private fun koin(module: String, version: String) =
-        "org.koin:koin-$module:$version"
 
 }

@@ -10,15 +10,17 @@ android {
 teanity {
     modules {
         version = Lib.v.teanity
+        useCore = true
         usePersistence = true
         useComponent = true
+        useDI = true
     }
 }
 
 dependencies {
     implementation(project(":model"))
-    implementation(Lib.koin.core)
 
-    kapt(Lib.androidx.roomCompiler)
-    kapt(Lib.androidx.lifecycleCompiler)
+    kapt "com.skoumal.teanity:persistence-compiler:${Lib.v.teanity}"
+
+    api(Lib.androidx.paging)
 }

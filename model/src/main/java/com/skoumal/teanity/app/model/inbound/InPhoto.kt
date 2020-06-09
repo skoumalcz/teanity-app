@@ -11,7 +11,7 @@ data class InPhoto(
     val id: String = "",
     @Json(name = "description")
     val description: String = "",
-    @Json(name = "created_at")
+    @Json(name = "fuck_this_ill_make_my_own")
     val createdAt: Long = System.currentTimeMillis(),
     @Json(name = "urls")
     val urls: InUrls = InUrls(),

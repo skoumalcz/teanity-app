@@ -7,6 +7,7 @@ teanity {
     modules {
         version = Lib.v.teanity
         useNetwork = true
+        useDI = true
     }
 }
 
@@ -14,8 +15,5 @@ dependencies {
     implementation(project(":model"))
     implementation(Lib.kotlin.coroutines)
 
-    implementation(Lib.square.retrofit)
     implementation(Lib.square.logging)
-
-    implementation(Lib.koin.core)
 }

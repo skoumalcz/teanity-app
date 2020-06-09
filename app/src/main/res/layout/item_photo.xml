@@ -32,7 +32,6 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 url="@{item.item.url}"
-                transformation="@{ScaleType.CENTER_CROP}"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 tools:scaleType="centerCrop"

@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import com.skoumal.teanity.view.TeanityFragment
+import com.skoumal.teanity.viewmodel.TeanityViewModel
 
-abstract class AppFragment<ViewModel : AppViewModel, Binding : ViewDataBinding> :
+abstract class AppFragment<ViewModel : TeanityViewModel, Binding : ViewDataBinding> :
     TeanityFragment<ViewModel, Binding>() {
 
     override fun onCreateView(

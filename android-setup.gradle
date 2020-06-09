@@ -20,11 +20,6 @@ subprojects {
                 versionCode = 1
                 versionName = "1.0"
             }
-
-            kotlinOptions {
-                freeCompilerArgs = ["-Xallow-result-return-type", "-Xuse-experimental=kotlin.Experimental"]
-                jvmTarget = "1.8"
-            }
         }
 
         configurations.all {

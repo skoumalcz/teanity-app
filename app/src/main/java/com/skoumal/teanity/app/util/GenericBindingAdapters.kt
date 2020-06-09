@@ -2,25 +2,16 @@ package com.skoumal.teanity.app.util
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.bumptech.glide.request.RequestOptions
-import com.skoumal.teanity.app.GlideApp
-import com.skoumal.teanity.ui.ScaleType
-import com.skoumal.teanity.ui.applyTransformation
+import coil.api.load
+import coil.transform.RoundedCornersTransformation
 
-@BindingAdapter("url", "transformation", requireAll = false)
-fun setImageFromUrl(view: ImageView, url: String?, transformation: ScaleType? = null) {
+@BindingAdapter("url", requireAll = false)
+fun setImageFromUrl(view: ImageView, url: String?) {
     if (url.isNullOrBlank()) {
         return
     }
 
-    val options = RequestOptions().also {
-        if (transformation != null) {
-            it.applyTransformation(transformation)
-        }
+    view.load(url) {
+        transformations(RoundedCornersTransformation(10f, 10f, 10f, 10f))
     }
-
-    GlideApp.with(view.context)
-        .load(url)
-        .apply(options)
-        .into(view)
 }

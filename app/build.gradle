@@ -21,6 +21,7 @@ teanity {
     modules {
         version = Lib.v.teanity
         useUI = true
+        useCore = true
     }
     version {
         versionType = com.skoumal.teanity.plugin.VersionType.SEMANTIC
@@ -30,5 +31,5 @@ teanity {
 dependencies {
     implementation(project(":data"))
 
-    kapt("com.github.bumptech.glide:compiler:4.10.0")
+    implementation("io.coil-kt:coil:0.11.0")
 }

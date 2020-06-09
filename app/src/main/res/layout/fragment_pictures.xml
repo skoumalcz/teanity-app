@@ -67,11 +67,10 @@
             android:id="@+id/pictures_list"
             dividerHorizontal="@{@drawable/divider_l1}"
             dividerVertical="@{@drawable/divider_l1}"
-            itemBinding="@{viewModel.itemBinding}"
-            items="@{viewModel.items}"
-            onLoadMore="@{() -> viewModel.requestRefresh()}"
+            adapter="@{viewModel.adapter}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scrollbars="vertical"
             android:clipToPadding="false"
             android:orientation="vertical"
             android:overScrollMode="never"
@@ -85,7 +84,7 @@
             tools:listitem="@layout/item_photo" />
 
         <FrameLayout
-            gone="@{!viewModel.isLoadingPhotos}"
+            gone="@{!viewModel.isLoading()}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom">
