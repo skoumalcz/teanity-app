@@ -3,17 +3,12 @@ plugins {
     id("teanity")
 }
 
-teanity {
-    modules {
-        version = Lib.v.teanity
-        useNetwork = true
-        useDI = true
-    }
-}
-
 dependencies {
     implementation(project(":model"))
     implementation(Lib.kotlin.coroutines)
 
     implementation(Lib.square.logging)
+
+    implementation("teanity:di:unspecified")
+    implementation("teanity:network:unspecified")
 }

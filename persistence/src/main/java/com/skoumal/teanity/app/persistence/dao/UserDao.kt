@@ -10,6 +10,9 @@ import com.skoumal.teanity.persistence.BaseDao
 internal interface UserDao : BaseDao<User> {
 
     @Query("SELECT * FROM user WHERE user.id = :id LIMIT 1")
-    fun byId(id: String): LiveData<User>
+    fun observeById(id: String): LiveData<User?>
+
+    @Query("SELECT * FROM user WHERE user.id = :id LIMIT 1")
+    suspend fun byId(id: String): User?
 
 }

@@ -9,6 +9,6 @@ class DetailViewModel(
     private val users: GetUserByIdUseCase
 ) : AppViewModel() {
 
-    val user = users(photo.uid)
+    val user = users.observe(photo.uid)
 
 }

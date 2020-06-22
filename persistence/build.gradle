@@ -7,20 +7,14 @@ android {
     defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
 }
 
-teanity {
-    modules {
-        version = Lib.v.teanity
-        useCore = true
-        usePersistence = true
-        useComponent = true
-        useDI = true
-    }
-}
-
 dependencies {
     implementation(project(":model"))
 
-    kapt "com.skoumal.teanity:persistence-compiler:${Lib.v.teanity}"
+    implementation("teanity:core:unspecified")
+    implementation("teanity:persistence:unspecified")
+    api("teanity:component:unspecified")
+    implementation("teanity:di:unspecified")
+    kapt("teanity:persistence-compiler:unspecified")
 
     api(Lib.androidx.paging)
 }

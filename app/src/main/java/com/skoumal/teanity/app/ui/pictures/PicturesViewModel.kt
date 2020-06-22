@@ -3,11 +3,11 @@ package com.skoumal.teanity.app.ui.pictures
 import androidx.lifecycle.Transformations
 import com.skoumal.teanity.app.BR
 import com.skoumal.teanity.app.data.usecase.PutRemotePhotosUseCase
-import com.skoumal.teanity.app.model.recyclable.GenericAdapter
 import com.skoumal.teanity.app.model.recyclable.PhotoItem
 import com.skoumal.teanity.app.model.recyclable.calculateDiff
 import com.skoumal.teanity.app.persistence.usecase.GetPhotosUseCase
 import com.skoumal.teanity.app.view.AppStateViewModel
+import com.skoumal.teanity.list.BindingAdapter
 import kotlinx.coroutines.delay
 
 class PicturesViewModel(
@@ -15,7 +15,7 @@ class PicturesViewModel(
     private val remote: PutRemotePhotosUseCase
 ) : AppStateViewModel<PicturesState>(PicturesState.Loading) {
 
-    val adapter = GenericAdapter<PhotoItem> {
+    val adapter = BindingAdapter<PhotoItem> {
         it.setVariable(BR.viewModel, this)
     }
 
@@ -53,7 +53,7 @@ class PicturesViewModel(
                 val newItems = newState.items.map { PhotoItem(it) }
                 PicturesState.Loaded(
                     newItems,
-                    adapter.callbackFrom(newItems).calculateDiff()
+                    adapter.getCallbackFrom(newItems).calculateDiff()
                 )
             }
             else -> newState

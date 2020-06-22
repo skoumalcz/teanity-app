@@ -17,19 +17,11 @@ android {
 
 }
 
-teanity {
-    modules {
-        version = Lib.v.teanity
-        useUI = true
-        useCore = true
-    }
-    version {
-        versionType = com.skoumal.teanity.plugin.VersionType.SEMANTIC
-    }
-}
-
 dependencies {
     implementation(project(":data"))
 
+    implementation("teanity:ui:unspecified")
+    implementation("teanity:core:unspecified")
+    implementation("teanity:di:unspecified")
     implementation("io.coil-kt:coil:0.11.0")
 }

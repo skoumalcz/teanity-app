@@ -3,18 +3,13 @@ plugins {
     id("teanity")
 }
 
-teanity {
-    modules {
-        version = Lib.v.teanity
-        useDI = true
-        useComponent = true
-    }
-}
-
 dependencies {
     api(project(":model"))
     api(project(":network"))
     api(project(":persistence"))
 
+    implementation("teanity:di:unspecified")
+
+    api(Lib.kotlin.coroutines)
     api(Lib.other.kotpref)
 }

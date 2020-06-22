@@ -5,8 +5,6 @@
 
     <data>
 
-        <import type="com.skoumal.teanity.ui.ScaleType" />
-
         <variable
             name="item"
             type="com.skoumal.teanity.app.model.recyclable.PhotoItem" />

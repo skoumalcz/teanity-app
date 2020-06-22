@@ -3,15 +3,9 @@ plugins {
     id("teanity")
 }
 
-teanity {
-    modules {
-        version = Lib.v.teanity
-
-        usePersistence = true
-        useNetwork = true
-    }
-}
-
 dependencies {
     api(Lib.kotlin.lib)
+
+    implementation("teanity:persistence:unspecified")
+    implementation("teanity:network:unspecified")
 }
