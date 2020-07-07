@@ -2,8 +2,8 @@ package com.skoumal.teanity.app.network.di
 
 import com.skoumal.teanity.app.network.BuildConfig
 import com.skoumal.teanity.app.network.DateToLongAdapter
-import com.skoumal.teanity.app.network.TokenInterceptor
 import com.skoumal.teanity.app.network.Unsplash
+import com.skoumal.teanity.network.interceptor.TokenInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -21,7 +21,7 @@ internal val networkModule = module {
     single { createClient(get(), get(), get()) }
     single { createMoshi() }
 
-    single { TokenInterceptor(get(named<TokenInterceptor>())) }
+    single { TokenInterceptor("Authorization", "Client-ID %s".format(get<String>(named("token")))) }
     single<Converter.Factory> { createConverter(get()) }
 
     single { createRetrofit(get(), get()) }

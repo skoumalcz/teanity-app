@@ -4,9 +4,9 @@ import androidx.lifecycle.Transformations
 import com.skoumal.teanity.app.BR
 import com.skoumal.teanity.app.data.usecase.PutRemotePhotosUseCase
 import com.skoumal.teanity.app.model.recyclable.PhotoItem
-import com.skoumal.teanity.app.model.recyclable.calculateDiff
 import com.skoumal.teanity.app.persistence.usecase.GetPhotosUseCase
 import com.skoumal.teanity.app.view.AppStateViewModel
+import com.skoumal.teanity.extensions.calculateDiff
 import com.skoumal.teanity.list.BindingAdapter
 import kotlinx.coroutines.delay
 
