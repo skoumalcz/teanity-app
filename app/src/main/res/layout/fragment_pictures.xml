@@ -19,7 +19,7 @@
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/surfaceColorVariant"
+            android:background="?colorSurfaceVariant"
             app:elevation="0dp">
 
             <androidx.appcompat.widget.Toolbar
@@ -54,7 +54,7 @@
                         android:text="Pictures"
                         android:textAllCaps="true"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-                        android:textColor="?attr/textColor" />
+                        android:textColor="?colorOnSurface" />
 
                 </LinearLayout>
 

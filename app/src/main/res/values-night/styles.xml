@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="Theme" parent="Foundation.Extras">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorSecondary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant</item>
+        <item name="colorOnSurface">@color/colorText</item>
+        <item name="colorOnSurfaceVariant">@color/colorTextInactive</item>
+        <item name="colorOnPrimary">@color/colorText</item>
+        <item name="colorOnPrimaryVariant">@color/colorTextInactive</item>
+    </style>
+
+</resources>

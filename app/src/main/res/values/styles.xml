@@ -5,28 +5,29 @@
 
     <!--////-->
 
-    <style name="Foundation" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-
-        <item name="android:windowBackground">?surfaceColor</item>
+    <style name="Foundation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="cornerRadius">@dimen/r2</item>
         <item name="cardElevation">@dimen/l0_50</item>
     </style>
 
     <style name="Foundation.Extras" />
 
+    <style name="Theme.Launcher" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
     <style name="Theme" parent="Foundation.Extras">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorSecondary</item>
         <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="surfaceColor">@color/colorSurface</item>
-        <item name="surfaceColorVariant">@color/colorSurfaceVariant</item>
-        <item name="textColor">@color/colorText</item>
-        <item name="textColorInactive">@color/colorTextInactive</item>
-        <item name="textColorInverse">@color/colorTextInverse</item>
-        <item name="textColorInactiveInverse">@color/colorTextInactiveInverse</item>
+        <item name="colorSurface">#fff</item>
+        <item name="colorSurfaceVariant">#EDEDED</item>
+        <item name="colorOnSurface">#000</item>
+        <item name="colorOnSurfaceVariant">#404040</item>
+        <item name="colorOnPrimary">@color/colorText</item>
+        <item name="colorOnPrimaryVariant">@color/colorTextInactive</item>
     </style>
 
 </resources>

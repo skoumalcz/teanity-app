@@ -14,7 +14,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?attr/surfaceColor"
+        android:background="?colorSurface"
         android:elevation="@dimen/l4"
         android:paddingLeft="@{viewModel.insets.left}"
         android:paddingRight="@{viewModel.insets.right}">
@@ -23,7 +23,7 @@
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/surfaceColorVariant"
+            android:background="?colorSurfaceVariant"
             app:elevation="0dp">
 
             <androidx.appcompat.widget.Toolbar
@@ -79,7 +79,7 @@
                         android:text="Detail"
                         android:textAllCaps="true"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-                        android:textColor="?attr/textColor"
+                        android:textColor="?colorOnSurface"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/detail_back"
@@ -134,7 +134,7 @@
                         android:includeFontPadding="false"
                         android:text="Author"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                        android:textColor="?attr/textColorInactive"
+                        android:textColor="?colorOnSurfaceVariant"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
